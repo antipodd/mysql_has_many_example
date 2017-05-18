@@ -1,0 +1,23 @@
+CREATE DATABASE IF NOT EXISTS school_db;
+
+USE school_db;
+
+CREATE TABLE IF NOT EXISTS classrooms(
+  id INT(6) AUTO_INCREMENT PRIMARY KEY,
+  name VARCHAR(30) NOT NULL,
+  grade VARCHAR(30)
+);
+
+CREATE TABLE IF NOT EXISTS classroom_users(
+  id INT(6) AUTO_INCREMENT PRIMARY KEY,
+  classroom_id INT(6),
+  user_id INT(6),
+  role VARCHAR(15) NOT NULL 
+);
+
+CREATE TABLE IF NOT EXISTS users (
+  id INT(6) AUTO_INCREMENT PRIMARY KEY,
+  first_name VARCHAR(30) NOT NULL,
+  last_name VARCHAR(30) NOT NULL,
+  email VARCHAR(50)
+);
